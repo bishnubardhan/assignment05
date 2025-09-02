@@ -119,6 +119,143 @@
         <button id="call-women" class="call-btn flex-1 px-3 py-2 bg-green-500 text-white rounded" data-name="নারী ও শিশু সহায়তা" data-number="109">📞 Call</button>
       </div>
     </div>
+    <div class="bg-white rounded-xl shadow p-6 w-[320px] h-[380px] ml-7 mt-6">
+      <div class="flex justify-between items-start">
+        <img src="B12-A5-Emergency-Hotline/assets/emergency.png" class="bg-[#FFE2E2] rounded-xl p-2 w-[60px] h-[60px]" alt="">
+        <button class="heart-btn text-2xl text-gray-400">♡</button>
+      </div>
+      <h2 class="text-lg font-semibold mt-4">দুর্নীতি</h2>
+      <p class="text-sm text-gray-500">Anti-Corruption</p>
+      <p class="text-2xl font-bold mt-2">106</p>
+      <span class="inline-block mt-1 text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-500">সরকারি</span>
+      <div class="flex gap-2 mt-6">
+        <button id="copy-anti" class="copy-btn flex-1 px-3 py-2 border rounded" data-number="106">🗐 Copy</button>
+        <button id="call-anti" class="call-btn flex-1 px-3 py-2 bg-green-500 text-white rounded" data-name="দুর্নীতি" data-number="106">📞 Call</button>
+      </div>
+    </div>
+
+
+    <div class="bg-white rounded-xl shadow p-6 w-[320px] h-[380px] ml-7 mt-6">
+      <div class="flex justify-between items-start">
+        <img src="B12-A5-Emergency-Hotline/assets/emergency.png" class="bg-[#FFF2E2] rounded-xl p-2 w-[60px] h-[60px]" alt="">
+        <button class="heart-btn text-2xl text-gray-400">♡</button>
+      </div>
+      <h2 class="text-lg font-semibold mt-4">বিদ্যুৎ বিভ্রাট</h2>
+      <p class="text-sm text-gray-500">Electricity Outage</p>
+      <p class="text-2xl font-bold mt-2">16216</p>
+      <span class="inline-block mt-1 text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-500">বিদ্যুৎ</span>
+      <div class="flex gap-2 mt-6">
+        <button id="copy-electric" class="copy-btn flex-1 px-3 py-2 border rounded" data-number="16216">🗐 Copy</button>
+        <button id="call-electric" class="call-btn flex-1 px-3 py-2 bg-green-500 text-white rounded" data-name="বিদ্যুৎ বিভ্রাট" data-number="16216">📞 Call</button>
+      </div>
+    </div>
+
+
+    <div class="bg-white rounded-xl shadow p-6 w-[320px] h-[380px] ml-7 mt-6">
+      <div class="flex justify-between items-start">
+        <img src="B12-A5-Emergency-Hotline/assets/emergency.png" class="bg-[#E2FFF5] rounded-xl p-2 w-[60px] h-[60px]" alt="">
+        <button class="heart-btn text-2xl text-gray-400">♡</button>
+      </div>
+      <h2 class="text-lg font-semibold mt-4">ব্র্যাক</h2>
+      <p class="text-sm text-gray-500">Brac</p>
+      <p class="text-2xl font-bold mt-2">16445</p>
+      <span class="inline-block mt-1 text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-500">এনজিও</span>
+      <div class="flex gap-2 mt-6">
+        <button id="copy-brac" class="copy-btn flex-1 px-3 py-2 border rounded" data-number="16445">🗐 Copy</button>
+        <button id="call-brac" class="call-btn flex-1 px-3 py-2 bg-green-500 text-white rounded" data-name="ব্র্যাক" data-number="16445">📞 Call</button>
+      </div>
+    </div>
+
+
+    <div class="bg-white rounded-xl shadow p-6 w-[320px] h-[380px] ml-7 mt-6">
+      <div class="flex justify-between items-start">
+        <img src="B12-A5-Emergency-Hotline/assets/emergency.png" class="bg-[#E2FFF0] rounded-xl p-2 w-[60px] h-[60px]" alt="">
+        <button class="heart-btn text-2xl text-gray-400">♡</button>
+      </div>
+      <h2 class="text-lg font-semibold mt-4">বাংলাদেশ রেলওয়ে</h2>
+      <p class="text-sm text-gray-500">Bangladesh Railway</p>
+      <p class="text-2xl font-bold mt-2">163</p>
+      <span class="inline-block mt-1 text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-500">পরিবহন</span>
+      <div class="flex gap-2 mt-6">
+        <button id="copy-railway" class="copy-btn flex-1 px-3 py-2 border rounded" data-number="163">🗐 Copy</button>
+        <button id="call-railway" class="call-btn flex-1 px-3 py-2 bg-green-500 text-white rounded" data-name="বাংলাদেশ রেলওয়ে" data-number="163">📞 Call</button>
+      </div>
+    </div>
+
+  </div>
+
+    </section>
+    <aside class="bg-white p-4 rounded-xl shadow">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-bold">Call History</h3>
+        <button id="clearHistory" class="text-sm bg-green-500 text-white px-3 py-1 rounded">Clear</button>
+      </div>
+     <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
+    </aside>
+  </main>
+
+
+  
+
+  <script>
+  let heartCount = 0;
+  let copyCount = 0;
+  let coins = 100; 
+
+  const heartDisplay = document.getElementById("heartCount");
+  const copyDisplay = document.getElementById("copyCount");
+  const historyList = document.getElementById("historyList");
+  const clearBtn = document.getElementById("clearHistory");
+  const toast = document.getElementById("toast");
+  const coinDisplay = document.getElementById("coinCount");
+
+
+  document.querySelectorAll(".heart-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      heartCount++;
+      heartDisplay.textContent = heartCount;
+    });
+  });
+
+   clearBtn.addEventListener("click", () => {
+  historyList.innerHTML = ""; 
+});
+
+
+  document.querySelectorAll(".copy-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const number = btn.getAttribute("data-number");
+    navigator.clipboard.writeText(number).then(() => {
+      copyCount++;
+      copyDisplay.textContent = copyCount;
+      showToast(`Copied: ${number}`);
+    });
+  });
+});
+
+document.querySelectorAll(".call-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (coins >= 20) {
+      coins -= 20; 
+      coinDisplay.textContent = coins; 
+
+      const name = btn.getAttribute("data-name");
+      const number = btn.getAttribute("data-number");
+      const time = new Date().toLocaleTimeString();
+
+      const li = document.createElement("li");
+      li.textContent = `${name} (${number}) - ${time}`;
+      historyList.prepend(li);
+
+      alert(`📞 Calling ${name} at ${number}`);
+    } else {
+      alert("⚠ Not enough coins!");
+    }
+  });
+});
+</script>
+</body>
+</html>
 
 
 
